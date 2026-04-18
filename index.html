@@ -32,13 +32,13 @@
                         <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-200">
                             <span class="text-white font-bold">S</span>
                         </div>
-                        <span class="text-xl font-bold tracking-tight">SUBAIR</span>
+                        <span class="text-xl font-bold tracking-tight uppercase">SUBAIR</span>
                     </div>
                     <div class="hidden md:flex gap-10 text-sm font-semibold text-slate-500">
                         <a href="#work" class="hover:text-blue-600 transition-colors">Portfolio</a>
                         <a href="#services" class="hover:text-blue-600 transition-colors">Services</a>
                     </div>
-                    <a href="mailto:subair@yourdomain.com" class="bg-slate-900 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-600 transition-all">Contact Me</a>
+                    <a href="mailto:sbwebofficial92@gmail.com" class="bg-slate-900 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-600 transition-all">Get in Touch</a>
                 </div>
             </nav>
         );
@@ -55,24 +55,28 @@
                                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                                 <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                             </span>
-                            <span class="text-xs font-bold text-slate-600 uppercase tracking-widest">Active Engineer</span>
+                            <span class="text-xs font-bold text-slate-600 uppercase tracking-widest">Available for Hire</span>
                         </div>
-                        <h1 class="text-6xl md:text-[90px] font-bold tracking-tighter leading-[0.9] mb-8">
-                            DIGITAL <br/> <span class="gradient-text uppercase">ARCHITECT.</span>
+                        <h1 class="text-6xl md:text-[90px] font-bold tracking-tighter leading-[0.9] mb-8 uppercase">
+                            DIGITAL <br/> <span class="gradient-text">ARCHITECT.</span>
                         </h1>
                         <p class="text-xl text-slate-500 mb-12 max-w-xl leading-relaxed font-medium">
-                            I am Subair. I craft high-end web and mobile experiences. I specialize in building complex, scannable systems that drive business growth.
+                            I am Subair. I craft high-end web and mobile experiences. I specialize in building complex, scannable systems like POS and Enterprise ERPs.
                         </p>
                         <div class="flex flex-wrap gap-6 justify-center md:justify-start items-center">
-                            <a href="#projects" class="px-10 py-5 bg-blue-600 text-white rounded-2xl font-bold hover:bg-slate-900 transition-all shadow-2xl shadow-blue-200">View My Work</a>
-                            <a href="#" class="text-slate-900 font-bold border-b-2 border-slate-900 pb-1 hover:text-blue-600 hover:border-blue-600 transition-all uppercase tracking-widest text-sm">Download CV</a>
+                            <a href="#projects" class="px-10 py-5 bg-blue-600 text-white rounded-2xl font-bold hover:bg-slate-900 transition-all shadow-2xl shadow-blue-200">View Work</a>
+                            <div class="flex items-center gap-4 text-slate-400 font-bold text-sm tracking-widest uppercase">
+                                <a href="https://www.linkedin.com/in/subair-ms-b98635203/" target="_blank" class="hover:text-blue-600 transition-colors">LinkedIn</a>
+                                <span>/</span>
+                                <a href="https://github.com/Zubair-92" target="_blank" class="hover:text-slate-900 transition-colors">GitHub</a>
+                            </div>
                         </div>
                     </div>
                     <div class="w-full max-w-md">
                         <div class="relative group">
                             <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-violet-600 rounded-[3rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
                             <div class="relative bg-white rounded-[3rem] overflow-hidden aspect-[4/5] shadow-2xl">
-                                <img src="profile.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Subair&size=1024&background=0D8ABC&color=fff&bold=true'" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                                <img src="profile.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Subair&size=1024&background=f1f5f9&color=0f172a&bold=true'" class="w-full h-full object-cover transition duration-700" />
                             </div>
                         </div>
                     </div>
@@ -85,7 +89,7 @@
                 { title: 'Marketplace Development', icon: 'bi-shop', desc: 'Building multi-vendor platforms with secure payment flows.' },
                 { title: 'POS Systems', icon: 'bi-upc-scan', desc: 'Custom hardware-integrated software for retail efficiency.' },
                 { title: 'Mobile App Design', icon: 'bi-phone-flip', desc: 'High-performance Flutter apps for iOS and Android.' },
-                { title: 'Enterprise Tooling', icon: 'bi-gear-wide-connected', desc: 'Staff and payroll management systems for enterprises.' }
+                { title: 'Internal Tooling', icon: 'bi-gear-wide-connected', desc: 'Staff and payroll management systems for enterprises.' }
             ];
 
             return (
@@ -138,7 +142,7 @@
                     <div class="max-w-7xl mx-auto">
                         <div class="flex justify-between items-end mb-24">
                             <div>
-                                <h2 class="text-5xl font-bold tracking-tight mb-4 uppercase">Case Studies</h2>
+                                <h2 class="text-5xl font-bold tracking-tight mb-4 uppercase font-heading">Case Studies</h2>
                                 <p class="text-slate-500 font-medium italic">Handpicked selection of technical projects.</p>
                             </div>
                         </div>
@@ -156,7 +160,7 @@
                                             <span class="text-xs font-black text-blue-600 uppercase tracking-tighter">{p.category}</span>
                                             <div class="h-px flex-1 bg-slate-200"></div>
                                         </div>
-                                        <h3 class="text-2xl font-bold mb-4">{p.title}</h3>
+                                        <h3 class="text-2xl font-bold mb-4 font-heading">{p.title}</h3>
                                         <p class="text-slate-500 text-sm leading-relaxed mb-6">{p.desc}</p>
                                         <div class="flex gap-2">
                                             {p.tags.map(t => <span key={t} class="px-3 py-1 bg-slate-100 rounded-full text-[10px] font-bold text-slate-600 uppercase">{t}</span>)}
@@ -175,19 +179,20 @@
                 <div class="max-w-7xl mx-auto">
                     <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-24">
                         <div class="max-w-lg">
-                            <h2 class="text-4xl font-bold mb-8">HAVE A VISION? <br/> <span class="gradient-text italic uppercase">LET'S CODE IT.</span></h2>
-                            <p class="text-slate-500 font-medium leading-relaxed">I am Subair. Available for freelance work and full-time senior roles. Looking for a high-quality engineer?</p>
+                            <h2 class="text-4xl font-bold mb-8 uppercase font-heading">HAVE A VISION? <br/> <span class="gradient-text italic">LET'S CODE IT.</span></h2>
+                            <p class="text-slate-500 font-medium leading-relaxed">Available for freelance work and full-time senior roles. Reach out for high-quality engineering.</p>
                         </div>
                         <div>
-                            <div class="text-xs font-black uppercase tracking-widest text-slate-400 mb-6">Direct Contact</div>
-                            <a href="mailto:subair@yourdomain.com" class="text-3xl font-bold text-blue-600 hover:text-slate-900 transition-colors">subair@yourdomain.com</a>
+                            <div class="text-xs font-black uppercase tracking-widest text-slate-400 mb-6">Contact Details</div>
+                            <a href="mailto:sbwebofficial92@gmail.com" class="text-2xl md:text-3xl font-bold text-blue-600 hover:text-slate-900 transition-colors block mb-2">sbwebofficial92@gmail.com</a>
+                            <div class="text-xl font-bold text-slate-900">+974 50143321</div>
                         </div>
                     </div>
                     <div class="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-slate-100 gap-8">
                         <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">© 2026 SUBAIR DEVELOPER</p>
                         <div class="flex gap-10 text-sm font-bold uppercase tracking-widest text-slate-900">
+                            <a href="https://www.linkedin.com/in/subair-ms-b98635203/" target="_blank" class="hover:text-blue-600 transition-colors">LinkedIn</a>
                             <a href="https://github.com/Zubair-92" target="_blank" class="hover:text-blue-600 transition-colors">GitHub</a>
-                            <a href="#" class="hover:text-blue-600 transition-colors">LinkedIn</a>
                         </div>
                     </div>
                 </div>
