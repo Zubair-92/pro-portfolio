@@ -40,7 +40,7 @@
                     </div>
                     <div class="flex items-center gap-4">
                         <a href="https://www.linkedin.com/in/subair-ms-b98635203/" target="_blank" class="text-slate-400 hover:text-blue-600 transition-colors text-xl"><i class="bi bi-linkedin"></i></a>
-                        <a href="mailto:sbwebofficial92@gmail.com" class="bg-slate-900 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-600 transition-all">Let's Talk</a>
+                        <a href="mailto:sbwebofficial92@gmail.com" class="bg-slate-900 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-600 transition-all shadow-lg shadow-blue-100">Let's Talk</a>
                     </div>
                 </div>
             </nav>
@@ -121,24 +121,27 @@
                     category: 'RETAIL ERP', 
                     desc: 'A heavy-duty engine with POS hardware support, inventory alerts, and scannable barcode generation.', 
                     features: ['Zebra Integration', 'Tax Invoicing', 'API Driven'],
-                    link: 'https://github.com/Zubair-92', 
-                    image: 'https://images.unsplash.com/photo-1556742049-04ff4f6a0299?w=800' 
+                    github: 'https://github.com/Zubair-92', 
+                    live: 'https://multistore-pro.onrender.com',
+                    image: 'https://images.unsplash.com/photo-1556742049-04ff4f6a0299?auto=format&fit=crop&q=80&w=800' 
                 },
                 { 
                     title: 'Staff Management', 
                     category: 'ENTERPRISE', 
                     desc: 'Automated solution for team attendance, payroll generation, and project task assignments.', 
                     features: ['Breeze Security', 'Automated Salary', 'Attendance Log'],
-                    link: 'https://github.com/Zubair-92', 
-                    image: 'https://images.unsplash.com/photo-1454165833767-027ffea7028c?w=800' 
+                    github: 'https://github.com/Zubair-92', 
+                    live: 'https://staff-manager.onrender.com',
+                    image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=800' 
                 },
                 { 
                     title: 'Mobile Shopping App', 
                     category: 'CROSS-PLATFORM', 
                     desc: 'Customer-facing mobile suite with real-time cart sync, Dio integration, and scannable search.', 
                     features: ['Provider State', 'Dio REST', 'Responsive UI'],
-                    link: 'https://github.com/Zubair-92', 
-                    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800' 
+                    github: 'https://github.com/Zubair-92', 
+                    live: 'https://multistore-mobile.onrender.com',
+                    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800' 
                 }
             ];
 
@@ -146,16 +149,21 @@
                 <section id="work" class="py-32 px-8">
                     <div class="max-w-7xl mx-auto">
                         <div class="mb-24">
-                            <h2 class="text-5xl font-bold tracking-tight mb-4 uppercase font-heading text-slate-900">Portfolio</h2>
-                            <p class="text-slate-500 font-medium italic">Case studies of complex technical builds.</p>
+                            <h2 class="text-5xl font-bold tracking-tight mb-4 uppercase font-heading text-slate-900">Featured Work</h2>
+                            <p class="text-slate-500 font-medium italic">Click on images to see live project demos.</p>
                         </div>
                         <div class="space-y-32">
                             {projects.map((p, i) => (
                                 <div key={i} class={`flex flex-col ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-20 items-center`}>
                                     <div class="flex-1 w-full">
-                                        <div class="relative overflow-hidden rounded-[2.5rem] bg-slate-100 card-hover aspect-video">
+                                        <a href={p.live} target="_blank" class="block relative overflow-hidden rounded-[2.5rem] bg-slate-100 card-hover aspect-video group">
                                             <img src={p.image} class="w-full h-full object-cover transition duration-700 group-hover:scale-110" />
-                                        </div>
+                                            <div class="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                                <div class="bg-white text-slate-900 px-6 py-3 rounded-full font-bold shadow-xl flex items-center gap-2">
+                                                    <i class="bi bi-box-arrow-up-right"></i> Open Live Project
+                                                </div>
+                                            </div>
+                                        </a>
                                     </div>
                                     <div class="flex-1">
                                         <span class="text-xs font-black text-blue-600 uppercase tracking-[0.2em] mb-4 block">{p.category}</span>
@@ -164,9 +172,10 @@
                                         <div class="flex flex-wrap gap-3 mb-10">
                                             {p.features.map(f => <span key={f} class="px-4 py-2 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-700">{f}</span>)}
                                         </div>
-                                        <a href={p.link} target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 text-white rounded-2xl font-bold hover:bg-blue-600 transition-all">
-                                            View Source Code <i class="bi bi-github"></i>
-                                        </a>
+                                        <div class="flex gap-4">
+                                            <a href={p.live} target="_blank" class="px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold hover:bg-slate-900 transition-all shadow-xl shadow-blue-100">Live Demo</a>
+                                            <a href={p.github} target="_blank" class="px-8 py-4 bg-white border border-slate-200 text-slate-900 rounded-2xl font-bold hover:bg-slate-50 transition-all">View Code</a>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
@@ -178,11 +187,11 @@
 
         const Footer = () => (
             <footer class="pt-32 pb-12 px-8 border-t border-slate-100">
-                <div class="max-w-7xl mx-auto">
+                <div class="max-w-7xl mx-auto text-center md:text-left">
                     <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-24">
                         <div class="max-w-lg">
                             <h2 class="text-4xl font-bold mb-8 uppercase font-heading text-blue-600">ENGINEERING <br/> EXCELLENCE.</h2>
-                            <p class="text-slate-500 font-medium leading-relaxed font-heading italic tracking-tighter">Available for freelance and senior engineering roles.</p>
+                            <p class="text-slate-500 font-medium leading-relaxed font-heading italic tracking-tighter">Available for freelance and senior engineering roles globally.</p>
                         </div>
                         <div>
                             <div class="text-xs font-black uppercase tracking-widest text-slate-400 mb-6">Contact Info</div>
