@@ -35,10 +35,13 @@
                         <span class="text-xl font-bold tracking-tight uppercase">SUBAIR</span>
                     </div>
                     <div class="hidden md:flex gap-10 text-sm font-semibold text-slate-500">
-                        <a href="#work" class="hover:text-blue-600 transition-colors">Portfolio</a>
-                        <a href="#services" class="hover:text-blue-600 transition-colors">Services</a>
+                        <a href="#work" class="hover:text-blue-600 transition-colors">Featured Work</a>
+                        <a href="#services" class="hover:text-blue-600 transition-colors">Expertise</a>
                     </div>
-                    <a href="mailto:sbwebofficial92@gmail.com" class="bg-slate-900 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-600 transition-all">Get in Touch</a>
+                    <div class="flex items-center gap-4">
+                        <a href="https://www.linkedin.com/in/subair-ms-b98635203/" target="_blank" class="text-slate-400 hover:text-blue-600 transition-colors text-xl"><i class="bi bi-linkedin"></i></a>
+                        <a href="mailto:sbwebofficial92@gmail.com" class="bg-slate-900 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-600 transition-all">Hire Me</a>
+                    </div>
                 </div>
             </nav>
         );
@@ -55,20 +58,18 @@
                                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                                 <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                             </span>
-                            <span class="text-xs font-bold text-slate-600 uppercase tracking-widest">Available for Hire</span>
+                            <span class="text-xs font-bold text-slate-600 uppercase tracking-widest">Available for New Projects</span>
                         </div>
                         <h1 class="text-6xl md:text-[90px] font-bold tracking-tighter leading-[0.9] mb-8 uppercase">
-                            DIGITAL <br/> <span class="gradient-text">ARCHITECT.</span>
+                            SYSTEMS <br/> <span class="gradient-text">ENGINEER.</span>
                         </h1>
                         <p class="text-xl text-slate-500 mb-12 max-w-xl leading-relaxed font-medium">
-                            I am Subair. I craft high-end web and mobile experiences. I specialize in building complex, scannable systems like POS and Enterprise ERPs.
+                            I build high-performance retail terminals, enterprise management software, and scannable inventory engines. 
                         </p>
                         <div class="flex flex-wrap gap-6 justify-center md:justify-start items-center">
-                            <a href="#projects" class="px-10 py-5 bg-blue-600 text-white rounded-2xl font-bold hover:bg-slate-900 transition-all shadow-2xl shadow-blue-200">View Work</a>
-                            <div class="flex items-center gap-4 text-slate-400 font-bold text-sm tracking-widest uppercase">
-                                <a href="https://www.linkedin.com/in/subair-ms-b98635203/" target="_blank" class="hover:text-blue-600 transition-colors">LinkedIn</a>
-                                <span>/</span>
-                                <a href="https://github.com/Zubair-92" target="_blank" class="hover:text-slate-900 transition-colors">GitHub</a>
+                            <a href="#work" class="px-10 py-5 bg-blue-600 text-white rounded-2xl font-bold hover:bg-slate-900 transition-all shadow-2xl shadow-blue-200">Explore My Work</a>
+                            <div class="text-slate-400 font-bold text-sm tracking-widest uppercase flex gap-4">
+                                <span>+974 50143321</span>
                             </div>
                         </div>
                     </div>
@@ -84,89 +85,61 @@
             </section>
         );
 
-        const Services = () => {
-            const services = [
-                { title: 'Marketplace Development', icon: 'bi-shop', desc: 'Building multi-vendor platforms with secure payment flows.' },
-                { title: 'POS Systems', icon: 'bi-upc-scan', desc: 'Custom hardware-integrated software for retail efficiency.' },
-                { title: 'Mobile App Design', icon: 'bi-phone-flip', desc: 'High-performance Flutter apps for iOS and Android.' },
-                { title: 'Internal Tooling', icon: 'bi-gear-wide-connected', desc: 'Staff and payroll management systems for enterprises.' }
-            ];
-
-            return (
-                <section id="services" class="py-32 px-8 bg-slate-900 text-white rounded-[3rem]">
-                    <div class="max-w-7xl mx-auto">
-                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-                            {services.map((s, i) => (
-                                <div key={i} class="p-8 bg-white/5 border border-white/10 rounded-3xl hover:bg-white/10 transition-all">
-                                    <i class={`bi ${s.icon} text-4xl text-blue-400 mb-6 block`}></i>
-                                    <h3 class="text-xl font-bold mb-4">{s.title}</h3>
-                                    <p class="text-slate-400 text-sm leading-relaxed">{s.desc}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-            );
-        };
-
         const Projects = () => {
             const projects = [
                 { 
-                    title: 'MultiStore Pro', 
-                    category: 'E-Commerce & POS', 
-                    desc: 'A full-scale engine featuring barcode scanning, thermal printing, and dynamic inventory management.', 
-                    tags: ['Laravel', 'Hardware API'], 
+                    title: 'MultiStore Marketplace & POS', 
+                    category: 'RETAIL TECH', 
+                    desc: 'A comprehensive ERP featuring barcode scanning, thermal receipt printing, and multi-vendor inventory sync.', 
+                    features: ['Hardware Integration', 'RESTful APIs', 'Dual-Currency Support'],
                     link: 'https://github.com/Zubair-92', 
-                    image: 'https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800' 
+                    image: 'https://images.unsplash.com/photo-1556742049-04ff4f6a0299?w=800' 
                 },
                 { 
-                    title: 'Staff Pro Manager', 
-                    category: 'Enterprise Solution', 
-                    desc: 'Standalone software for real-time attendance, project assignment, and automated salary processing.', 
-                    tags: ['PHP', 'Bootstrap 5'], 
+                    title: 'Staff Pro Management', 
+                    category: 'ENTERPRISE ERP', 
+                    desc: 'Automated payroll and attendance engine. Handles complex task assignments and monthly salary generation for large teams.', 
+                    features: ['Auth Security', 'Automated Payroll', 'Attendance Analytics'],
                     link: 'https://github.com/Zubair-92', 
-                    image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800' 
+                    image: 'https://images.unsplash.com/photo-1454165833767-027ffea7028c?w=800' 
                 },
                 { 
-                    title: 'Retail Mobile App', 
-                    category: 'Cross-Platform', 
-                    desc: 'Mobile shopping experience with real-time cart sync and scannable search features.', 
-                    tags: ['Flutter', 'Dio'], 
+                    title: 'Mobile Shopping Suite', 
+                    category: 'CROSS-PLATFORM', 
+                    desc: 'High-speed Flutter application for real-time customer shopping, scannable search, and order tracking.', 
+                    features: ['State Management', 'Dio Integration', 'Responsive UI'],
                     link: 'https://github.com/Zubair-92', 
                     image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800' 
                 }
             ];
 
             return (
-                <section id="projects" class="py-32 px-8">
+                <section id="work" class="py-32 px-8">
                     <div class="max-w-7xl mx-auto">
-                        <div class="flex justify-between items-end mb-24">
-                            <div>
-                                <h2 class="text-5xl font-bold tracking-tight mb-4 uppercase font-heading">Case Studies</h2>
-                                <p class="text-slate-500 font-medium italic">Handpicked selection of technical projects.</p>
-                            </div>
+                        <div class="mb-24">
+                            <h2 class="text-5xl font-bold tracking-tight mb-4 uppercase font-heading">Case Studies</h2>
+                            <p class="text-slate-500 font-medium italic">Deep dives into engineering challenges I have solved.</p>
                         </div>
-                        <div class="grid lg:grid-cols-3 gap-16">
+                        <div class="space-y-32">
                             {projects.map((p, i) => (
-                                <a href={p.link} target="_blank" key={i} class="group cursor-pointer">
-                                    <div class="relative overflow-hidden rounded-[2.5rem] bg-slate-100 mb-8 card-hover aspect-square">
-                                        <img src={p.image} class="w-full h-full object-cover transition duration-700 group-hover:scale-110" />
-                                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-10">
-                                            <span class="text-white font-bold uppercase tracking-widest text-sm">View Project Code</span>
+                                <div key={i} class={`flex flex-col ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-20 items-center`}>
+                                    <div class="flex-1 w-full">
+                                        <div class="relative overflow-hidden rounded-[2.5rem] bg-slate-100 card-hover aspect-video">
+                                            <img src={p.image} class="w-full h-full object-cover transition duration-700 group-hover:scale-110" />
                                         </div>
                                     </div>
-                                    <div class="px-4">
-                                        <div class="flex items-center gap-4 mb-3">
-                                            <span class="text-xs font-black text-blue-600 uppercase tracking-tighter">{p.category}</span>
-                                            <div class="h-px flex-1 bg-slate-200"></div>
+                                    <div class="flex-1">
+                                        <span class="text-xs font-black text-blue-600 uppercase tracking-[0.2em] mb-4 block">{p.category}</span>
+                                        <h3 class="text-4xl font-bold mb-6 font-heading">{p.title}</h3>
+                                        <p class="text-slate-500 text-lg leading-relaxed mb-8">{p.desc}</p>
+                                        <div class="flex flex-wrap gap-3 mb-10">
+                                            {p.features.map(f => <span key={f} class="px-4 py-2 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-700">{f}</span>)}
                                         </div>
-                                        <h3 class="text-2xl font-bold mb-4 font-heading">{p.title}</h3>
-                                        <p class="text-slate-500 text-sm leading-relaxed mb-6">{p.desc}</p>
-                                        <div class="flex gap-2">
-                                            {p.tags.map(t => <span key={t} class="px-3 py-1 bg-slate-100 rounded-full text-[10px] font-bold text-slate-600 uppercase">{t}</span>)}
-                                        </div>
+                                        <a href={p.link} target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 text-white rounded-2xl font-bold hover:bg-blue-600 transition-all">
+                                            Explore Codebase <i class="bi bi-github"></i>
+                                        </a>
                                     </div>
-                                </a>
+                                </div>
                             ))}
                         </div>
                     </div>
@@ -179,17 +152,17 @@
                 <div class="max-w-7xl mx-auto">
                     <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-24">
                         <div class="max-w-lg">
-                            <h2 class="text-4xl font-bold mb-8 uppercase font-heading">HAVE A VISION? <br/> <span class="gradient-text italic">LET'S CODE IT.</span></h2>
-                            <p class="text-slate-500 font-medium leading-relaxed">Available for freelance work and full-time senior roles. Reach out for high-quality engineering.</p>
+                            <h2 class="text-4xl font-bold mb-8 uppercase font-heading text-blue-600">LET'S BUILD <br/> THE NEXT BIG THING.</h2>
+                            <p class="text-slate-500 font-medium leading-relaxed">I am Subair. Based in Qatar, working globally. Currently accepting new projects and full-time senior engineering opportunities.</p>
                         </div>
                         <div>
-                            <div class="text-xs font-black uppercase tracking-widest text-slate-400 mb-6">Contact Details</div>
-                            <a href="mailto:sbwebofficial92@gmail.com" class="text-2xl md:text-3xl font-bold text-blue-600 hover:text-slate-900 transition-colors block mb-2">sbwebofficial92@gmail.com</a>
-                            <div class="text-xl font-bold text-slate-900">+974 50143321</div>
+                            <div class="text-xs font-black uppercase tracking-widest text-slate-400 mb-6">Connect Direct</div>
+                            <a href="mailto:sbwebofficial92@gmail.com" class="text-2xl md:text-3xl font-bold hover:text-blue-600 transition-colors block mb-4">sbwebofficial92@gmail.com</a>
+                            <div class="text-xl font-bold text-slate-900 tracking-widest">+974 50143321</div>
                         </div>
                     </div>
                     <div class="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-slate-100 gap-8">
-                        <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">© 2026 SUBAIR DEVELOPER</p>
+                        <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">© 2026 SUBAIR MS</p>
                         <div class="flex gap-10 text-sm font-bold uppercase tracking-widest text-slate-900">
                             <a href="https://www.linkedin.com/in/subair-ms-b98635203/" target="_blank" class="hover:text-blue-600 transition-colors">LinkedIn</a>
                             <a href="https://github.com/Zubair-92" target="_blank" class="hover:text-blue-600 transition-colors">GitHub</a>
@@ -203,7 +176,6 @@
             <div class="antialiased selection:bg-blue-100 selection:text-blue-700">
                 <Navbar />
                 <Hero />
-                <Services />
                 <Projects />
                 <Footer />
             </div>
