@@ -617,6 +617,39 @@
         margin-right: 0 !important;
     }
 }
+/* 3. MOBILE: Phone screens (Up to 576px) */
+@media (max-width: 576px) {
+    .container, .container-fluid, .navbar, .hero-section {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .portfolio-grid {
+        grid-template-columns: 1fr !important; /* Force single column */
+    }
+    .hero-glow { display: none !important; } /* Hide heavy visuals */
+    .filter-wrapper { flex-wrap: wrap !important; } /* Allow filters to wrap */
+}
+
+/* 4. TABLET: Small screens (577px to 991px) */
+@media (min-width: 577px) and (max-width: 991px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* 5. LAPTOP: Medium screens (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+/* 6. DESKTOP: Large screens (1200px and above) */
+@media (min-width: 1200px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
     </style>
 </head>
 <body>
